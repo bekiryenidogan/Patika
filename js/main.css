@@ -3,7 +3,7 @@ body {
   }
   
   .clock {
-    position: relative;
+    position: relative; 
     text-align: center;
     color: #e98208;
     font-size: 60px;

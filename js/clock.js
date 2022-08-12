@@ -1,5 +1,5 @@
-let name = document.querySelector("#name");
-let clock = document.querySelector("#clock");
+let setName = document.querySelector("#setName");
+let setClock = document.querySelector("#setClock");
 let hour = document.querySelector("#hour");
 let minute = document.querySelector("#minute");
 let second = document.querySelector ("#second");
@@ -8,7 +8,7 @@ let second = document.querySelector ("#second");
 displayTime()
 
 
-name.innerHTML = prompt("Adınız :")
+setName.innerHTML = prompt("Adınız :")
 
 
 function displayTime() {
@@ -17,22 +17,24 @@ function displayTime() {
     let min = dateTime.getMinutes();
     let sec = dateTime.getSeconds();
 
-    if (hrs<10) {
-        hrs= "0"+hrs;
+    if (hrs < 10) {
+        hour.innerHTML= "0"+hrs;
     } else {
         hour.innerHTML = hrs;
     }
      if (min<10) {
-        min= "0"+min;
+        minute.innerHTML= "0"+min;
     } else {
         minute.innerHTML = min;
     }
-    if (sec<10) {
-        sec= "0"+sec;
+    if (sec< 10) {
+        second.innerHTML = "0" + sec;
     } else {
         second.innerHTML = sec;
     }
-   
+    // hour.innerHTML = hrs;
+    // // minute.innerHTML   = min;
+    // second.innerHTML = sec;
 
 }
 
