@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE >
 <html>
 <head>
@@ -55,3 +56,62 @@
 </html>
 
 
+=======
+<!DOCTYPE >
+<html>
+<head>
+</head>
+<body>
+        <form  id="frm1" action="Calculate.html">
+            <table width="350px" border="1px">
+                <tr>
+                    <th colspan="2">Akbank - Patika</th>
+                </tr>       
+                <tr>
+                    <td>First Number</td>
+                    <td><input type="number" id="firstNumber" > </td>
+                </tr>
+                <tr>
+                    <td>Second Number</td>
+                    <td><input type="number" id="secondNumber" > </td>
+                </tr>
+                <tr>
+                    <td>Third Number</td>
+                    <td><input type="number" id="thirdNumber" > </td>
+                </tr>
+                <tr>
+                    <td>Fourth Number</td>
+                    <td><input type="number" id="fourthNumber" > </td>
+                </tr>
+     
+            </table>
+
+<input type="button" onclick="Calculate()" name="" id="message" value="calculate" ><span id="showmsg" style="color: #FA2B44;"></span>
+<script>
+
+        
+    function Calculate()
+    {
+        var firstNumber = Number(document.getElementById("firstNumber").value);
+        var secondNumber = Number(document.getElementById("secondNumber").value);
+        var thirdNumber = Number(document.getElementById("thirdNumber").value);
+        var fourthNumber = Number(document.getElementById("fourthNumber").value);
+
+
+        let total = firstNumber + secondNumber + thirdNumber + fourthNumber;       
+
+        let isOddOrisEven = (total % 2 )
+
+        if (isOddOrisEven == 0) {
+           return  document.getElementById('showmsg').innerHTML = " Total is a even number" ; 
+        } else {
+           return  document.getElementById('showmsg').innerHTML = " Total is an odd number" ; 
+        }
+    }
+</script>   
+
+</body>
+</html>
+
+
+>>>>>>> 86e7fcb5c4c3b90ba5cfb91064ce2879785857a1
