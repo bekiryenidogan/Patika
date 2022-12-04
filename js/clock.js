@@ -1,37 +1,17 @@
-let setName = document.querySelector("#setName");
-let setClock = document.querySelector("#setClock");
-let hour = document.querySelector("#hour");
-let minute = document.querySelector("#minute");
-let second = document.querySelector("#second");
-
+var setName = document.querySelector("#setName"),
+  setClock = document.querySelector("#setClock"),
+  hour = document.querySelector("#hour"),
+  minute = document.querySelector("#minute"),
+  second = document.querySelector("#second");
 displayTime();
-
-setName.innerHTML = prompt("Adınız :");
-
+setName.innerHTML = prompt("Ad\u0131n\u0131z :");
 function displayTime() {
-  let dateTime = new Date();
-  let hrs = dateTime.getHours();
-  let min = dateTime.getMinutes();
-  let sec = dateTime.getSeconds();
-
-  if (hrs < 10) {
-    hour.innerHTML = "0" + hrs;
-  } else {
-    hour.innerHTML = hrs;
-  }
-  if (min < 10) {
-    minute.innerHTML = "0" + min;
-  } else {
-    minute.innerHTML = min;
-  }
-  if (sec < 10) {
-    second.innerHTML = "0" + sec;
-  } else {
-    second.innerHTML = sec;
-  }
-  // hour.innerHTML = hrs;
-  // // minute.innerHTML   = min;
-  // second.innerHTML = sec;
+  var a = new Date(),
+    b = a.getHours(),
+    c = a.getMinutes();
+  a = a.getSeconds();
+  hour.innerHTML = 10 > b ? "0" + b : b;
+  minute.innerHTML = 10 > c ? "0" + c : c;
+  second.innerHTML = 10 > a ? "0" + a : a;
 }
-
 setInterval(displayTime, 10);
